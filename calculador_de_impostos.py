@@ -17,6 +17,14 @@ if __name__ == '__main__':
     calculador_de_impostos.realiza_calculo(orcamento, ICMS())
     calculador_de_impostos.realiza_calculo(orcamento, ISS())
 
+    print('ISS com ICMS')
+    ISS_com_ICMS = ISS(ICMS())
+    calculador_de_impostos.realiza_calculo(orcamento, ISS_com_ICMS)
+
     print('ICPP e IKCV')
     calculador_de_impostos.realiza_calculo(orcamento, ICPP())
     calculador_de_impostos.realiza_calculo(orcamento, IKCV())
+
+    print('ICPP com IKCV')
+    ICPP_com_IKCV = ICPP(IKCV())
+    calculador_de_impostos.realiza_calculo(orcamento, ICPP_com_IKCV)
